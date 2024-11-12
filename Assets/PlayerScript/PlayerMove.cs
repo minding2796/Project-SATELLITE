@@ -19,6 +19,7 @@ namespace PlayerScript
 
         private void FixedUpdate()
         {
+            if (MoveButtons.Direction != 0) transform.rotation = Quaternion.Euler(0, (MoveButtons.Direction - 1) * 90, 0);
             _rigidbody2D.velocity = new Vector2(MoveButtons.Direction * speed, MoveButtons.TriggerJump ? jumpForce : _rigidbody2D.velocity.y);
             if (!MoveButtons.TriggerJump && Math.Abs(_rigidbody2D.velocity.y - 0) < 0.001 && _rigidbody2D.IsTouchingLayers(LayerMask.GetMask("Ground"))) JumpCount = maxJumpCount;
             MoveButtons.TriggerJump = false;

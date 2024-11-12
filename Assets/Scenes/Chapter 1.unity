@@ -458,19 +458,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ChapterSelectScene
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 670346757}
-        m_TargetAssemblyTypeName: ManagerScript.LocalDataManager, Assembly-CSharp
-        m_MethodName: ClearChapter
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: ChapterSelectScene
+          m_StringArgument: Chapter 1-1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &305792662
@@ -634,17 +622,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8faaf6628c01514fa460a42b2106d56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &670346757 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2519183587518899473, guid: 072034792a1cf4147bc582fe3a869641, type: 3}
-  m_PrefabInstance: {fileID: 670346755}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e70953466d0b2742839f8cb34499b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1342357222

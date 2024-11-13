@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -44,20 +45,31 @@ namespace UIScript
 
         private void UpdateNotice(string notice)
         {
-            _currentNotice = notice.Replace("\n\n", "\n");
-            _parentImage.color = string.IsNullOrEmpty(_currentNotice) ? new Color32(0, 0, 0, 0) : Color.white;
+            if (notice.Equals(_currentNotice)) return;
+            _currentNotice = notice.TrimStart().Replace("\n\n", "\n");
             if (_coroutine != null) StopCoroutine(_coroutine);
             _coroutine = StartCoroutine(TextUpdateFlow());
         }
 
         private IEnumerator TextUpdateFlow()
         {
-            _text.text = "";
-            foreach (var c in _currentNotice)
+            if (!string.IsNullOrEmpty(_currentNotice)) _parentImage.color = Color.white;
+            var text = _text.text.ToCharArray().Concat(new char[Mathf.Max(_currentNotice.Length - _text.text.Length, 0)]).ToArray();
+            for (var i = 0; i < _currentNotice.Length; i++)
             {
-                _text.text += c;
+                if (text[i] == _currentNotice[i]) continue;
+                text[i] = _currentNotice[i];
+                _text.text = string.Join("", text).Trim();
                 yield return null;
             }
+            for (var i = _currentNotice.Length; i < text.Length; i++)
+            {
+                text[i] = ' ';
+                _text.text = string.Join("", text).Trim();
+                yield return null;
+            }
+            _text.text = _currentNotice;
+            if (string.IsNullOrEmpty(_currentNotice)) _parentImage.color = new Color32(0, 0, 0, 0);
         }
     }
 }

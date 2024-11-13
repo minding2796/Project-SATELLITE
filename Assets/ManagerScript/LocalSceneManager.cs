@@ -10,11 +10,15 @@ namespace ManagerScript
     public class LocalSceneManager : MonoBehaviour
     {
         private RawImage _fadeObject;
-
+        [SerializeField] private Button.ButtonClickedEvent onFadeEnded;
         private void Start()
         {
             _fadeObject = GameObject.FindGameObjectWithTag("FadeObject").GetComponent<RawImage>();
-            StartCoroutine(Fade(false, () => _fadeObject.gameObject.SetActive(false)));
+            StartCoroutine(Fade(false, () =>
+            {
+                _fadeObject.gameObject.SetActive(false);
+                onFadeEnded.Invoke();
+            }));
         }
 
         public void LoadScene(string sceneName)

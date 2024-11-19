@@ -8,6 +8,7 @@ namespace PlayerScript
         [SerializeField] private float speed, jumpForce;
         public int maxJumpCount;
         public static int JumpCount;
+        public static PlayerNpcDetection CurrentNpcDetection;
         private Rigidbody2D _rigidbody2D;
 
         private void Start()

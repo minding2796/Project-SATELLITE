@@ -18,7 +18,7 @@ namespace UIScript
         private bool[] _importance;
         private int _index;
         private string _currentNotice;
-        private IEnumerator _generator;
+        private Coroutine _coroutine;
         public void Start()
         {
             _text = GetComponent<TextMeshProUGUI>();
@@ -72,12 +72,8 @@ namespace UIScript
         {
             if (script.Equals(_currentNotice)) return;
             _currentNotice = script;
-            if (_generator?.Current != null)
-            {
-                StopCoroutine(_generator);
-                LayoutRebuilder.ForceRebuildLayoutImmediate(_text.rectTransform);
-            }
-            StartCoroutine(_generator = ScriptUpdateFlow());
+            if (_coroutine != null) StopCoroutine(_coroutine);
+            _coroutine = StartCoroutine(ScriptUpdateFlow());
         }
 
         private IEnumerator ScriptUpdateFlow()

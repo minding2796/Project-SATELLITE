@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace UIScript
@@ -10,9 +11,9 @@ namespace UIScript
     public class TextScriptProcessor : MonoBehaviour
     {
         [SerializeField] private string scriptPath;
-        public Button.ButtonClickedEvent onScriptFinished;
-        public Button.ButtonClickedEvent onInterrupt;
-        [NonSerialized] protected TextMeshProUGUI Text;
+        public UnityEvent onScriptFinished;
+        public UnityEvent onInterrupt;
+        [NonSerialized] private TextMeshProUGUI _text;
         private string[] _scripts;
         private bool[] _importance;
         private int _index;
@@ -20,7 +21,7 @@ namespace UIScript
         private IEnumerator _generator;
         public void Start()
         {
-            Text = GetComponent<TextMeshProUGUI>();
+            _text = GetComponent<TextMeshProUGUI>();
             LoadScript(scriptPath);
         }
 
@@ -50,7 +51,7 @@ namespace UIScript
 
         public void Previous()
         {
-            if (--_index >= 0) Text.text = _scripts[_index];
+            if (--_index >= 0) _text.text = _scripts[_index];
         }
 
         public void LoadScript(string path)
@@ -77,21 +78,14 @@ namespace UIScript
 
         private IEnumerator ScriptUpdateFlow()
         {
-            var text = Text.text.ToCharArray().Concat(new char[Mathf.Max(_currentNotice.Length - Text.text.Length, 0)]).ToArray();
-            for (var i = 0; i < _currentNotice.Length; i++)
+            var text = "";
+            foreach (var c in _currentNotice)
             {
-                if (text[i] == _currentNotice[i]) continue;
-                text[i] = _currentNotice[i];
-                Text.text = string.Join("", text).Trim();
+                _text.text = text += c;
                 yield return null;
             }
-            for (var i = _currentNotice.Length; i < text.Length; i++)
-            {
-                text[i] = ' ';
-                Text.text = string.Join("", text).Trim();
-                yield return null;
-            }
-            Text.text = _currentNotice;
+            _text.text = _currentNotice;
+            LayoutRebuilder.ForceRebuildLayoutImmediate(_text.rectTransform);
         }
     }
 }

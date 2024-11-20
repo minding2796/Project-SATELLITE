@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,12 +26,7 @@ namespace UIScript
 
         public static void RemoveNotice(string notice)
         {
-            if (_instance) _instance.UpdateNotice(_instance._currentNotice.ReplaceFirst(notice, string.Empty));
-        }
-
-        public static void ReplaceNotice(string oldNotice, string newNotice)
-        {
-            if (_instance) _instance.UpdateNotice(_instance._currentNotice.ReplaceFirst(oldNotice, newNotice));
+            if (_instance) _instance.UpdateNotice(_instance._currentNotice.ReplaceFirst(notice, new string(' ', notice.Length)));
         }
 
         public static void AddNotice(string notice)
@@ -46,7 +42,7 @@ namespace UIScript
         private void UpdateNotice(string notice)
         {
             if (notice.Equals(_currentNotice)) return;
-            _currentNotice = notice.TrimStart().Replace("\n\n", "\n");
+            _currentNotice = notice;
             if (_coroutine != null) StopCoroutine(_coroutine);
             _coroutine = StartCoroutine(TextUpdateFlow());
         }
@@ -62,13 +58,10 @@ namespace UIScript
                 _text.text = string.Join("", text).Trim();
                 yield return null;
             }
-            for (var i = _currentNotice.Length; i < text.Length; i++)
-            {
-                text[i] = ' ';
-                _text.text = string.Join("", text).Trim();
-                yield return null;
-            }
+            _currentNotice = new Regex("\n *\n").Replace(_currentNotice.Trim(), "\n");
             _text.text = _currentNotice;
+            LayoutRebuilder.ForceRebuildLayoutImmediate(_text.rectTransform);
+            LayoutRebuilder.ForceRebuildLayoutImmediate(_parentImage.rectTransform);
             if (string.IsNullOrEmpty(_currentNotice)) _parentImage.color = new Color32(0, 0, 0, 0);
         }
     }

@@ -12,21 +12,22 @@ namespace UIScript
         private Action _nextScriptAction;
         [SerializeField] private Image pfpImage;
         [SerializeField] private TextMeshProUGUI profileName;
+        private Image _profileNameBackground;
 
         private void Awake()
         {
             onScriptFinished.AddListener(EndScript);
             onInterrupt.AddListener(InterruptScript);
+            _profileNameBackground = profileName.transform.parent.GetComponent<Image>();
         }
 
         private void Update()
         {
-            if (!IsLoaded)
-            {
-                pfpImage.sprite = PlayerMove.CurrentNpcDetection?.Sr.sprite;
-                profileName.text = PlayerMove.CurrentNpcDetection?.npcName;
-            }
-            else if (!PlayerMove.CurrentNpcDetection) Interrupt();
+            if (IsLoaded && !PlayerMove.CurrentNpcDetection) Interrupt();
+            if (IsLoaded) return;
+            pfpImage.sprite = PlayerMove.CurrentNpcDetection?.Sr.sprite;
+            profileName.text = PlayerMove.CurrentNpcDetection?.npcName;
+            _profileNameBackground.color = new Color(1, 1, 1, string.IsNullOrEmpty(profileName.text) ? 0 : 1);
         }
 
         public void LoadAndProcess()

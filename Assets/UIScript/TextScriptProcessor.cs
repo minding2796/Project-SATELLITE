@@ -67,18 +67,24 @@ namespace UIScript
             }
             ResetScript();
         }
-        
-        public void UpdateScript(string notice)
+
+        public void UpdateScript(string script)
         {
-            if (notice.Equals(_currentNotice)) return;
-            _currentNotice = notice.TrimStart().Replace("\n\n", "\n");
-            if (_generator?.Current != null) StopCoroutine(_generator);
+            if (script.Equals(_currentNotice)) return;
+            _currentNotice = script;
+            if (_generator?.Current != null)
+            {
+                StopCoroutine(_generator);
+                LayoutRebuilder.ForceRebuildLayoutImmediate(_text.rectTransform);
+            }
             StartCoroutine(_generator = ScriptUpdateFlow());
         }
 
         private IEnumerator ScriptUpdateFlow()
         {
             var text = "";
+            _text.text = text;
+            LayoutRebuilder.ForceRebuildLayoutImmediate(_text.rectTransform);
             foreach (var c in _currentNotice)
             {
                 _text.text = text += c;

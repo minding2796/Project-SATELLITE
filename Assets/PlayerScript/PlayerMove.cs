@@ -27,7 +27,7 @@ namespace PlayerScript
             EulerAngles.y = MoveButtons.Direction != 0 ? (MoveButtons.Direction - 1) * 90 : EulerAngles.y;
             transform.rotation = Quaternion.Euler(EulerAngles);
             _rigidbody2D.velocity = new Vector2(MoveButtons.Direction * speed * (_rigidbody2D.IsTouchingLayers(LayerMask.GetMask("Accelerator")) ? 2f : 1f), MoveButtons.TriggerJump ? jumpForce * (IsGravityReversed ? -1 : 1) : _rigidbody2D.velocity.y);
-            if (!MoveButtons.TriggerJump && _rigidbody2D.velocity.y < jumpForce * 0.75f && _rigidbody2D.IsTouchingLayers(LayerMask.GetMask("Ground"))) JumpCount = maxJumpCount;
+            if (!MoveButtons.TriggerJump && (IsGravityReversed ? _rigidbody2D.velocity.y > jumpForce * -0.75f : _rigidbody2D.velocity.y < jumpForce * 0.75f) && _rigidbody2D.IsTouchingLayers(LayerMask.GetMask("Ground"))) JumpCount = maxJumpCount;
             MoveButtons.TriggerJump = false;
         }
     }

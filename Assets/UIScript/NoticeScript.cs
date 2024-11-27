@@ -56,7 +56,7 @@ namespace UIScript
                 if (text[i] == _currentNotice[i]) continue;
                 text[i] = _currentNotice[i];
                 _text.text = string.Join("", text).Trim();
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
             _currentNotice = new Regex("\n *\n").Replace(_currentNotice.Trim(), "\n");
             _text.text = _currentNotice;

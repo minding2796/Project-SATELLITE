@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 namespace UIScript
 {
+    [RequireComponent(typeof(TextMeshProUGUI))]
     public class TextScriptProcessor : MonoBehaviour
     {
         [SerializeField] private string scriptPath;
@@ -57,7 +58,7 @@ namespace UIScript
         public void LoadScript(string path)
         {
             if (string.IsNullOrEmpty(path)) return;
-            _scripts = Resources.Load<TextAsset>(path).text.Split("∮").Select(s => s.Trim()).ToArray();
+            _scripts = (Resources.Load<TextAsset>(path)?.text ?? "").Split("∮").Select(s => s.Trim()).ToArray();
             _importance = new bool[_scripts.Length];
             for (var i = 0; i < _scripts.Length; i++)
             {
@@ -84,7 +85,7 @@ namespace UIScript
             foreach (var c in _currentNotice)
             {
                 _text.text = text += c;
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
             _text.text = _currentNotice;
             LayoutRebuilder.ForceRebuildLayoutImmediate(_text.rectTransform);

@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: da11ea9cc38085641a3546c751d69d90
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6652111172298718291
+    second: Thinking Games_0
+  - first:
+      213: 5597055777824646970
+    second: Thinking Games_1
+  - first:
+      213: 7400202455186419805
+    second: Thinking Games_2
+  - first:
+      213: 6917432389030874750
+    second: Thinking Games_3
+  - first:
+      213: 5869936575251979162
+    second: Thinking Games_4
+  - first:
+      213: -9143706928575934111
+    second: Thinking Games_5
+  - first:
+      213: -106654454549881814
+    second: Thinking Games_6
+  - first:
+      213: -202993565939641877
+    second: Thinking Games_7
+  - first:
+      213: 7302768569357723118
+    second: Thinking Games_8
+  - first:
+      213: 6124465261210096679
+    second: Thinking Games_9
+  - first:
+      213: -3144430973764113108
+    second: Thinking Games_10
+  - first:
+      213: -2734238034132776828
+    second: Thinking Games_11
+  - first:
+      213: 666317736282430946
+    second: Thinking Games_12
+  - first:
+      213: -3772118986502125336
+    second: Thinking Games_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Thinking Games_0
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 31
+        width: 464
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35cb547eddb015c50800000000000000
+      internalID: 6652111172298718291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_1
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 157
+        width: 139
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a372941539cbcad40800000000000000
+      internalID: 5597055777824646970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_2
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 157
+        width: 119
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d503c5fccecc2b660800000000000000
+      internalID: 7400202455186419805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_3
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 157
+        width: 52
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e87f19b18afff50800000000000000
+      internalID: 6917432389030874750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_4
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 157
+        width: 119
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b97f50734367150800000000000000
+      internalID: 5869936575251979162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_5
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 156
+        width: 111
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16114ff6ef60b1180800000000000000
+      internalID: -9143706928575934111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_6
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 157
+        width: 52
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c57d2b656158ef0800000000000000
+      internalID: -106654454549881814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_7
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 157
+        width: 119
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be15a726d62de2df0800000000000000
+      internalID: -202993565939641877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_8
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 115
+        width: 120
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee564757255a85560800000000000000
+      internalID: 7302768569357723118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_9
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 156
+        width: 131
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 724d5adc4b87ef450800000000000000
+      internalID: 6124465261210096679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_10
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 156
+        width: 114
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ded0470bcbc54d0800000000000000
+      internalID: -3144430973764113108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_11
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 157
+        width: 183
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488472c9ef80e0ad0800000000000000
+      internalID: -2734238034132776828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_12
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 156
+        width: 119
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed18aa637c3f3900800000000000000
+      internalID: 666317736282430946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thinking Games_13
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 156
+        width: 103
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e8c80f64cdb6abc0800000000000000
+      internalID: -3772118986502125336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Thinking Games_0: 6652111172298718291
+      Thinking Games_1: 5597055777824646970
+      Thinking Games_10: -3144430973764113108
+      Thinking Games_11: -2734238034132776828
+      Thinking Games_12: 666317736282430946
+      Thinking Games_13: -3772118986502125336
+      Thinking Games_2: 7400202455186419805
+      Thinking Games_3: 6917432389030874750
+      Thinking Games_4: 5869936575251979162
+      Thinking Games_5: -9143706928575934111
+      Thinking Games_6: -106654454549881814
+      Thinking Games_7: -202993565939641877
+      Thinking Games_8: 7302768569357723118
+      Thinking Games_9: 6124465261210096679
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

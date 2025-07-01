@@ -12,6 +12,8 @@ namespace UIScript
         {
             get
             {
+                var axis = Input.GetAxis("Horizontal");
+                if (axis != 0) return axis;
                 return _isLeftButtonDown switch
                 {
                     true when _isRightButtonDown => 0,
@@ -27,6 +29,14 @@ namespace UIScript
         {
             _isLeftButtonDown = false;
             _isRightButtonDown = false;
+        }
+
+        private void FixedUpdate()
+        {
+            if (Input.GetAxis("Jump") == 0) return;
+            if (PlayerMove.JumpCount < 1) return;
+            TriggerJump = true;
+            PlayerMove.JumpCount--;
         }
 
         public void LeftButtonDown()

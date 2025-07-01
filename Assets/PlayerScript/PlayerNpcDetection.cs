@@ -9,6 +9,8 @@ namespace PlayerScript
     {
         public List<string> scriptPaths;
         public string npcName;
+        public bool autoProgress;
+        public bool preventProgress;
         [NonSerialized] public SpriteRenderer Sr;
         private int _index;
 
